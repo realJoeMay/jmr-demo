@@ -3,7 +3,7 @@
   <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Print • Scale Instructions</title>
+    <title>Print • Custom Scale Instructions</title>
     <link rel='preconnect' href='https://fonts.googleapis.com'>
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
     <link href='https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap' rel='stylesheet'>
@@ -358,7 +358,8 @@ h3 {
                 <div class="menu-button menu-button-scale display-scale-1x-btn selected" onclick="scale1x()">
 
                     
-                        1x
+                    <span style="margin-top:-3px;">2</span>
+                    <span style="font-size:0.9rem;">Servings</span>
                     
 
                 </div>
@@ -366,7 +367,8 @@ h3 {
                 <div class="menu-button menu-button-scale display-scale-2x-btn " onclick="scale2x()">
 
                     
-                        2x
+                    <span style="margin-top:-3px;">4</span>
+                    <span style="font-size:0.9rem;">Servings</span>
                     
 
                 </div>
@@ -393,7 +395,7 @@ h3 {
 
         <div class='menu-print' onclick="window.print()">
             <div class='menu-header menu-item'>
-                <span class='menu-icon icon-wrapper'><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zM432 248a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg></span>
+                <span class='menu-icon icon-wrapper'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M128 0C92.7 0 64 28.7 64 64l0 96 64 0 0-96 226.7 0L384 93.3l0 66.7 64 0 0-66.7c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0L128 0zM384 352l0 32 0 64-256 0 0-64 0-16 0-16 256 0zm64 32l32 0c17.7 0 32-14.3 32-32l0-96c0-35.3-28.7-64-64-64L64 192c-35.3 0-64 28.7-64 64l0 96c0 17.7 14.3 32 32 32l32 0 0 64c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-64zM432 248a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"/></svg></span>
                 <span class='menu-text'>Print</span>
             </div>
         </div>
@@ -408,12 +410,20 @@ h3 {
         <div class="header">
 
             <div class="title-area">
-                <h1>Scale Instructions</h1>
+                <h1>Custom Scale Instructions</h1>
                 
 
                 
                 
+                <div class='scale scale-1x'>
+                    <span class=''></span>
+                </div>
                 
+                
+                
+                <div class='scale scale-2x'>
+                    <span class=''></span>
+                </div>
                 
                 
             </div><!-- title-area -->
