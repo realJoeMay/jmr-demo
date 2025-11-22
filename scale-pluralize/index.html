@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Recipe Parent • JMRecipes</title>
+    <title>Pluralize • JMRecipes</title>
     <link rel='preconnect' href='https://fonts.googleapis.com'>
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
     <link href='https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap' rel='stylesheet'>
@@ -53,6 +53,10 @@ a:hover {
 }
 
 .display-scale-2x .scale-2x {
+  display: block;
+}
+
+.display-scale-4x .scale-4x {
   display: block;
 }
 
@@ -736,8 +740,8 @@ a.menu-header:hover {
                     <div class="menu-button menu-button-scale display-scale-1x-btn selected" onclick="scale1x()">
     
                         
-                        <span style="margin-top:-3px;">12</span>
-                        <span style="font-size:0.8rem;">Servings</span>
+                        <span style="margin-top:-3px;">1</span>
+                        <span style="font-size:0.8rem;">Serving</span>
                         
 
                     </div>
@@ -745,7 +749,16 @@ a.menu-header:hover {
                     <div class="menu-button menu-button-scale display-scale-2x-btn " onclick="scale2x()">
     
                         
-                        <span style="margin-top:-3px;">24</span>
+                        <span style="margin-top:-3px;">2</span>
+                        <span style="font-size:0.8rem;">Servings</span>
+                        
+
+                    </div>
+                    
+                    <div class="menu-button menu-button-scale display-scale-4x-btn " onclick="scale4x()">
+    
+                        
+                        <span style="margin-top:-3px;">4</span>
                         <span style="font-size:0.8rem;">Servings</span>
                         
 
@@ -772,17 +785,11 @@ a.menu-header:hover {
                         
 
                         
-                        <div class="menu-button menu-button-detail menu-button-detail-cost-per-serving" onclick="detailCostPerServing()">
-                            <span style="margin-top:-3px;">Cost</span>
-                            <span style="font-size:0.8rem;">per serving</span>
-                        </div>
-                        
 
                         
                         <div class="menu-button menu-button-detail menu-button-detail-nutrition-per-serving" onclick="detailNutritionPerServing()">
                             
-                            <span style="margin-top:-3px;">Nutrition</span>
-                            <span style="font-size:0.8rem;">per serving</span>
+                            Nutrition
                             
                         </div>
                         
@@ -829,6 +836,41 @@ a.menu-header:hover {
             <div class="menu-section-break scale scale-2x"></div>
             
             
+            
+            <div class='menu-details scale scale-4x'>
+                <div class='menu-scale'>
+                    <h3 class='menu-header'>Ingredient Detail</h3>
+                    <div class='menu-content menu-button-section'>
+
+                        <div class="menu-button menu-button-detail menu-button-detail-none selected" onclick="detailNone()">None</div>
+
+                        
+                        <div class="menu-button menu-button-detail menu-button-detail-cost" onclick="detailCost()">Cost</div>
+                        
+
+                        
+                        <div class="menu-button menu-button-detail menu-button-detail-cost-per-serving" onclick="detailCostPerServing()">
+                            <span style="margin-top:-3px;">Cost</span>
+                            <span style="font-size:0.8rem;">per serving</span>
+                        </div>
+                        
+
+                        
+                        <div class="menu-button menu-button-detail menu-button-detail-nutrition-per-serving" onclick="detailNutritionPerServing()">
+                            
+                            <span style="margin-top:-3px;">Nutrition</span>
+                            <span style="font-size:0.8rem;">per serving</span>
+                            
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section-break scale scale-4x"></div>
+            
+            
     
 
 
@@ -846,11 +888,13 @@ a.menu-header:hover {
                 </h3>
                 <ul class="copy-ingredients" style="display:none;">
                     
-                    <li>2 pints Child Recipe 1</li>
+                    <li>1 Egg</li>
                     
-                    <li>1½ lbs Child Recipe 2</li>
+                    <li>½ cup Milk</li>
                     
-                    <li>2 loaves Child Recipe 3</li>
+                    <li>1 slice Brioche Bread</li>
+                    
+                    <li>1 (15 oz) can Red Kidney Beans</li>
                     
                 </ul>
             </div>
@@ -863,17 +907,42 @@ a.menu-header:hover {
                     <span class='menu-text copy-ingredients-item'>
                         <span class="button-label">Copy Ingredients</span>
                         
-                        <span class="button-sublabel" style="font-size:0.8rem;">for 24 servings</span>
+                        <span class="button-sublabel" style="font-size:0.8rem;">for 2 servings</span>
                         
                     </span>
                 </h3>
                 <ul class="copy-ingredients" style="display:none;">
                     
-                    <li>4 pints Child Recipe 1</li>
+                    <li>2 Eggs</li>
                     
-                    <li>3 lbs Child Recipe 2</li>
+                    <li>1 cup Milk</li>
                     
-                    <li>4 loaves Child Recipe 3</li>
+                    <li>2 slices Brioche Bread</li>
+                    
+                    <li>2 (15 oz) cans Red Kidney Beans</li>
+                    
+                </ul>
+            </div>
+            
+            
+            
+            <div class='menu-copy-ingredients scale scale-4x'>
+                <h3 class='menu-header menu-item'>
+                    <span class='menu-icon icon-wrapper copy-ingredients-item'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M280 64l40 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l40 0 9.6 0C121 27.5 153.3 0 192 0s71 27.5 78.4 64l9.6 0zM64 112c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l256 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16l-16 0 0 24c0 13.3-10.7 24-24 24l-88 0-88 0c-13.3 0-24-10.7-24-24l0-24-16 0zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"/></svg></span>
+                    <span class='menu-text copy-ingredients-item'>
+                        <span class="button-label">Copy Ingredients</span>
+                        
+                        <span class="button-sublabel" style="font-size:0.8rem;">for 4 servings</span>
+                        
+                    </span>
+                </h3>
+                <ul class="copy-ingredients" style="display:none;">
+                    
+                    <li>4 Eggs</li>
+                    
+                    <li>2 cups Milk</li>
+                    
+                    <li>4 slices Brioche Bread</li>
                     
                 </ul>
             </div>
@@ -908,7 +977,7 @@ a.menu-header:hover {
             <div class="menu-section-break"></div>
     
             <div class='menu_feedback'>
-                <a class='menu-header menu-item' href="https://airtable.com/appKAe8EobJepqaUA/shrsBNxJiO8rjaQmq?prefill_page=Recipe+Parent&prefill_source_url=https%3A%2F%2Frealjoemay.github.io%2Fjmr-demo%2Flinked-parent" target="_blank">
+                <a class='menu-header menu-item' href="https://airtable.com/appKAe8EobJepqaUA/shrsBNxJiO8rjaQmq?prefill_page=Pluralize&prefill_source_url=https%3A%2F%2Frealjoemay.github.io%2Fjmr-demo%2Fscale-pluralize" target="_blank">
                     <span class='menu-icon icon-wrapper'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M160 368c26.5 0 48 21.5 48 48l0 16 72.5-54.4c8.3-6.2 18.4-9.6 28.8-9.6L448 368c8.8 0 16-7.2 16-16l0-288c0-8.8-7.2-16-16-16L64 48c-8.8 0-16 7.2-16 16l0 288c0 8.8 7.2 16 16 16l96 0zm48 124l-.2 .2-5.1 3.8-17.1 12.8c-4.8 3.6-11.3 4.2-16.8 1.5s-8.8-8.2-8.8-14.3l0-21.3 0-6.4 0-.3 0-4 0-48-48 0-48 0c-35.3 0-64-28.7-64-64L0 64C0 28.7 28.7 0 64 0L448 0c35.3 0 64 28.7 64 64l0 288c0 35.3-28.7 64-64 64l-138.7 0L208 492z"/></svg></span>
                     <span class='menu-text'>Feedback</span>
                 </a>
@@ -935,7 +1004,7 @@ a.menu-header:hover {
             <div class='recipe-box recipe-box-header'>
 
                 <div class='title-area'>
-                    <h1 class='recipe-title'>Recipe Parent</h1>
+                    <h1 class='recipe-title'>Pluralize</h1>
                     <span class='menu-toggle-btn icon-wrapper' onclick='toggleMenu()'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg></span>
                 </div>
                 
@@ -953,7 +1022,11 @@ a.menu-header:hover {
                             <span class='description-value'>
                                 
                                 
-                                <span class=''>12 servings</span>
+                                <span class=''>1 serving</span>
+                                
+                                
+                                
+                                <span class=''>1 toast</span>
                                 
                                 
                             </span>
@@ -968,9 +1041,7 @@ a.menu-header:hover {
                         <div class='description-row'>
                             <span class='description-label'>Cost:</span>
                             <span class=''>
-                                $1.35
-                                
-                                <span class="scale-cost-per-serving">($0.11 per serving)</span>
+                                $0.40
                                 
                             </span>
                         </div>
@@ -978,15 +1049,15 @@ a.menu-header:hover {
 
                         
                         <div class=''>
-                            <span class='description-label'>Nutrition per serving</span>
+                            <span class='description-label'>Nutrition</span>
                             <div class="nutrition">
-                                <div class="calories value">82</div>
+                                <div class="calories value">255</div>
                                 <div class="calories label">Calories</div>
-                                <div class="calories value">6g</div>
+                                <div class="calories value">10g</div>
                                 <div class="fat label">fat</div>
-                                <div class="fat value">0g</div>
+                                <div class="fat value">26g</div>
                                 <div class="carbs label">carbs</div>
-                                <div class="calories value">7g</div>
+                                <div class="calories value">14g</div>
                                 <div class="protein label">protein</div>
                             </div>    
                         </div>
@@ -1013,7 +1084,11 @@ a.menu-header:hover {
                             <span class='description-value'>
                                 
                                 
-                                <span class=''>24 servings</span>
+                                <span class=''>2 servings</span>
+                                
+                                
+                                
+                                <span class=''>2 toasts</span>
                                 
                                 
                             </span>
@@ -1028,9 +1103,9 @@ a.menu-header:hover {
                         <div class='description-row'>
                             <span class='description-label'>Cost:</span>
                             <span class=''>
-                                $2.69
+                                $0.81
                                 
-                                <span class="scale-cost-per-serving">($0.11 per serving)</span>
+                                <span class="scale-cost-per-serving">($0.40 per serving)</span>
                                 
                             </span>
                         </div>
@@ -1040,13 +1115,77 @@ a.menu-header:hover {
                         <div class=''>
                             <span class='description-label'>Nutrition per serving</span>
                             <div class="nutrition">
-                                <div class="calories value">82</div>
+                                <div class="calories value">255</div>
                                 <div class="calories label">Calories</div>
-                                <div class="calories value">6g</div>
+                                <div class="calories value">10g</div>
                                 <div class="fat label">fat</div>
-                                <div class="fat value">0g</div>
+                                <div class="fat value">26g</div>
                                 <div class="carbs label">carbs</div>
-                                <div class="calories value">7g</div>
+                                <div class="calories value">14g</div>
+                                <div class="protein label">protein</div>
+                            </div>    
+                        </div>
+                        
+
+                        
+
+                        
+
+
+                    </div><!-- description area -->
+                </div><!-- scale -->
+                
+                
+                
+                <div class='scale scale-4x'>
+                    <div class='description-area'>
+
+                        
+
+                        
+                        <div class='description-row'>
+                            <span class='description-label'>Yield:</span>
+                            <span class='description-value'>
+                                
+                                
+                                <span class=''>4 servings</span>
+                                
+                                
+                                
+                                <span class=''>4 toasts</span>
+                                
+                                
+                            </span>
+                        </div>
+                        
+
+                        
+
+                        
+
+                        
+                        <div class='description-row'>
+                            <span class='description-label'>Cost:</span>
+                            <span class=''>
+                                $1.62
+                                
+                                <span class="scale-cost-per-serving">($0.40 per serving)</span>
+                                
+                            </span>
+                        </div>
+                        
+
+                        
+                        <div class=''>
+                            <span class='description-label'>Nutrition per serving</span>
+                            <div class="nutrition">
+                                <div class="calories value">255</div>
+                                <div class="calories label">Calories</div>
+                                <div class="calories value">10g</div>
+                                <div class="fat label">fat</div>
+                                <div class="fat value">26g</div>
+                                <div class="carbs label">carbs</div>
+                                <div class="calories value">14g</div>
                                 <div class="protein label">protein</div>
                             </div>    
                         </div>
@@ -1083,32 +1222,30 @@ a.menu-header:hover {
                         <div class="ingredient">
             
                             
-                            <div class="ingredient-amount">2 pints</div>
+                            <div class="ingredient-amount">1</div>
                             
                 
                             
                             <div class="ingredient-item">
-                                Child Recipe 1
+                                Egg
                                 
-                                
-                                <a href="../linked-child-1" target="_blank" class="child-recipe-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></a>
                                 
                             </div>
                             
 
-                            <div class="ingredient-detail detail-cost">$0.38</div>
-                            <div class="ingredient-detail detail-cost-per-serving">$0.03</div>
+                            <div class="ingredient-detail detail-cost">$0.10</div>
+                            <div class="ingredient-detail detail-cost-per-serving">$0.10</div>
 
                             
                             <div class="ingredient-detail detail-nutrition-per-serving">
                                 <div class="nutrition">
-                                    <div class="calories value">23</div>
+                                    <div class="calories value">70</div>
                                     <div class="calories label">Calories</div>
-                                    <div class="calories value">2g</div>
+                                    <div class="calories value">5g</div>
                                     <div class="fat label">fat</div>
                                     <div class="fat value">0g</div>
                                     <div class="carbs label">carbs</div>
-                                    <div class="calories value">2g</div>
+                                    <div class="calories value">6g</div>
                                     <div class="protein label">protein</div>
                                 </div>
                             </div>
@@ -1119,32 +1256,30 @@ a.menu-header:hover {
                         <div class="ingredient">
             
                             
-                            <div class="ingredient-amount">1½ lbs</div>
+                            <div class="ingredient-amount">½ cup</div>
                             
                 
                             
                             <div class="ingredient-item">
-                                Child Recipe 2
+                                Milk
                                 
-                                
-                                <a href="../linked-child-2" target="_blank" class="child-recipe-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></a>
                                 
                             </div>
                             
 
-                            <div class="ingredient-detail detail-cost">$0.58</div>
-                            <div class="ingredient-detail detail-cost-per-serving">$0.05</div>
+                            <div class="ingredient-detail detail-cost">$0.08</div>
+                            <div class="ingredient-detail detail-cost-per-serving">$0.08</div>
 
                             
                             <div class="ingredient-detail detail-nutrition-per-serving">
                                 <div class="nutrition">
-                                    <div class="calories value">35</div>
+                                    <div class="calories value">75</div>
                                     <div class="calories label">Calories</div>
-                                    <div class="calories value">2g</div>
+                                    <div class="calories value">4g</div>
                                     <div class="fat label">fat</div>
-                                    <div class="fat value">0g</div>
+                                    <div class="fat value">6g</div>
                                     <div class="carbs label">carbs</div>
-                                    <div class="calories value">3g</div>
+                                    <div class="calories value">4g</div>
                                     <div class="protein label">protein</div>
                                 </div>
                             </div>
@@ -1155,35 +1290,56 @@ a.menu-header:hover {
                         <div class="ingredient">
             
                             
-                            <div class="ingredient-amount">2 loaves</div>
+                            <div class="ingredient-amount">1 slice</div>
                             
                 
                             
                             <div class="ingredient-item">
-                                Child Recipe 3
+                                Brioche Bread
                                 
-                                
-                                <a href="../linked-child-3" target="_blank" class="child-recipe-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></a>
                                 
                             </div>
                             
 
-                            <div class="ingredient-detail detail-cost">$0.38</div>
-                            <div class="ingredient-detail detail-cost-per-serving">$0.03</div>
+                            <div class="ingredient-detail detail-cost">$0.23</div>
+                            <div class="ingredient-detail detail-cost-per-serving">$0.23</div>
 
                             
                             <div class="ingredient-detail detail-nutrition-per-serving">
                                 <div class="nutrition">
-                                    <div class="calories value">23</div>
+                                    <div class="calories value">110</div>
                                     <div class="calories label">Calories</div>
                                     <div class="calories value">2g</div>
                                     <div class="fat label">fat</div>
-                                    <div class="fat value">0g</div>
+                                    <div class="fat value">20g</div>
                                     <div class="carbs label">carbs</div>
-                                    <div class="calories value">2g</div>
+                                    <div class="calories value">4g</div>
                                     <div class="protein label">protein</div>
                                 </div>
                             </div>
+                            
+
+                        </div><!-- ingredient -->
+                        
+                        <div class="ingredient">
+            
+                            
+                            <div class="ingredient-amount">1 (15 oz) can</div>
+                            
+                
+                            
+                            <div class="ingredient-item">
+                                Red Kidney Beans
+                                
+                                <span class="ingredient-item-descriptor">drained</span>
+                                
+                                
+                            </div>
+                            
+
+                            <div class="ingredient-detail detail-cost">$0.00</div>
+                            <div class="ingredient-detail detail-cost-per-serving">$0.00</div>
+
                             
 
                         </div><!-- ingredient -->
@@ -1214,32 +1370,30 @@ a.menu-header:hover {
                         <div class="ingredient">
             
                             
-                            <div class="ingredient-amount">4 pints</div>
+                            <div class="ingredient-amount">2</div>
                             
                 
                             
                             <div class="ingredient-item">
-                                Child Recipe 1
+                                Eggs
                                 
-                                
-                                <a href="../linked-child-1" target="_blank" class="child-recipe-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></a>
                                 
                             </div>
                             
 
-                            <div class="ingredient-detail detail-cost">$0.77</div>
-                            <div class="ingredient-detail detail-cost-per-serving">$0.03</div>
+                            <div class="ingredient-detail detail-cost">$0.19</div>
+                            <div class="ingredient-detail detail-cost-per-serving">$0.10</div>
 
                             
                             <div class="ingredient-detail detail-nutrition-per-serving">
                                 <div class="nutrition">
-                                    <div class="calories value">23</div>
+                                    <div class="calories value">70</div>
                                     <div class="calories label">Calories</div>
-                                    <div class="calories value">2g</div>
+                                    <div class="calories value">5g</div>
                                     <div class="fat label">fat</div>
                                     <div class="fat value">0g</div>
                                     <div class="carbs label">carbs</div>
-                                    <div class="calories value">2g</div>
+                                    <div class="calories value">6g</div>
                                     <div class="protein label">protein</div>
                                 </div>
                             </div>
@@ -1250,32 +1404,30 @@ a.menu-header:hover {
                         <div class="ingredient">
             
                             
-                            <div class="ingredient-amount">3 lbs</div>
+                            <div class="ingredient-amount">1 cup</div>
                             
                 
                             
                             <div class="ingredient-item">
-                                Child Recipe 2
+                                Milk
                                 
-                                
-                                <a href="../linked-child-2" target="_blank" class="child-recipe-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></a>
                                 
                             </div>
                             
 
-                            <div class="ingredient-detail detail-cost">$1.15</div>
-                            <div class="ingredient-detail detail-cost-per-serving">$0.05</div>
+                            <div class="ingredient-detail detail-cost">$0.15</div>
+                            <div class="ingredient-detail detail-cost-per-serving">$0.08</div>
 
                             
                             <div class="ingredient-detail detail-nutrition-per-serving">
                                 <div class="nutrition">
-                                    <div class="calories value">35</div>
+                                    <div class="calories value">75</div>
                                     <div class="calories label">Calories</div>
-                                    <div class="calories value">2g</div>
+                                    <div class="calories value">4g</div>
                                     <div class="fat label">fat</div>
-                                    <div class="fat value">0g</div>
+                                    <div class="fat value">6g</div>
                                     <div class="carbs label">carbs</div>
-                                    <div class="calories value">3g</div>
+                                    <div class="calories value">4g</div>
                                     <div class="protein label">protein</div>
                                 </div>
                             </div>
@@ -1286,32 +1438,178 @@ a.menu-header:hover {
                         <div class="ingredient">
             
                             
-                            <div class="ingredient-amount">4 loaves</div>
+                            <div class="ingredient-amount">2 slices</div>
                             
                 
                             
                             <div class="ingredient-item">
-                                Child Recipe 3
+                                Brioche Bread
                                 
-                                
-                                <a href="../linked-child-3" target="_blank" class="child-recipe-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></svg></a>
                                 
                             </div>
                             
 
-                            <div class="ingredient-detail detail-cost">$0.77</div>
-                            <div class="ingredient-detail detail-cost-per-serving">$0.03</div>
+                            <div class="ingredient-detail detail-cost">$0.46</div>
+                            <div class="ingredient-detail detail-cost-per-serving">$0.23</div>
 
                             
                             <div class="ingredient-detail detail-nutrition-per-serving">
                                 <div class="nutrition">
-                                    <div class="calories value">23</div>
+                                    <div class="calories value">110</div>
                                     <div class="calories label">Calories</div>
                                     <div class="calories value">2g</div>
                                     <div class="fat label">fat</div>
+                                    <div class="fat value">20g</div>
+                                    <div class="carbs label">carbs</div>
+                                    <div class="calories value">4g</div>
+                                    <div class="protein label">protein</div>
+                                </div>
+                            </div>
+                            
+
+                        </div><!-- ingredient -->
+                        
+                        <div class="ingredient">
+            
+                            
+                            <div class="ingredient-amount">2 (15 oz) cans</div>
+                            
+                
+                            
+                            <div class="ingredient-item">
+                                Red Kidney Beans
+                                
+                                <span class="ingredient-item-descriptor">drained</span>
+                                
+                                
+                            </div>
+                            
+
+                            <div class="ingredient-detail detail-cost">$0.00</div>
+                            <div class="ingredient-detail detail-cost-per-serving">$0.00</div>
+
+                            
+
+                        </div><!-- ingredient -->
+                        
+                    </div><!-- ingredient list -->
+
+    
+                
+                </div><!-- recipe-box -->
+            </div><!-- scale -->
+            
+            
+            
+            
+            <div class="scale scale-4x">
+                <div class="recipe-box recipe-box-ingredients">
+    
+                    
+                    <div class="ingredient-list-header">
+                        <h2 class='ingredient-list-name'>Ingredients</h2>
+                        <span class="ingredient-detail ingredient-detail-label detail-cost">Showing cost</span>
+                        <span class="ingredient-detail ingredient-detail-label detail-cost-per-serving">Showing cost per serving</span>
+                        <span class="ingredient-detail ingredient-detail-label detail-nutrition-per-serving">Showing nutrition per serving</span>
+                    </div>
+                    
+                    <div class="ingredient-list">
+                        
+                        <div class="ingredient">
+            
+                            
+                            <div class="ingredient-amount">4</div>
+                            
+                
+                            
+                            <div class="ingredient-item">
+                                Eggs
+                                
+                                
+                            </div>
+                            
+
+                            <div class="ingredient-detail detail-cost">$0.38</div>
+                            <div class="ingredient-detail detail-cost-per-serving">$0.10</div>
+
+                            
+                            <div class="ingredient-detail detail-nutrition-per-serving">
+                                <div class="nutrition">
+                                    <div class="calories value">70</div>
+                                    <div class="calories label">Calories</div>
+                                    <div class="calories value">5g</div>
+                                    <div class="fat label">fat</div>
                                     <div class="fat value">0g</div>
                                     <div class="carbs label">carbs</div>
+                                    <div class="calories value">6g</div>
+                                    <div class="protein label">protein</div>
+                                </div>
+                            </div>
+                            
+
+                        </div><!-- ingredient -->
+                        
+                        <div class="ingredient">
+            
+                            
+                            <div class="ingredient-amount">2 cups</div>
+                            
+                
+                            
+                            <div class="ingredient-item">
+                                Milk
+                                
+                                
+                            </div>
+                            
+
+                            <div class="ingredient-detail detail-cost">$0.31</div>
+                            <div class="ingredient-detail detail-cost-per-serving">$0.08</div>
+
+                            
+                            <div class="ingredient-detail detail-nutrition-per-serving">
+                                <div class="nutrition">
+                                    <div class="calories value">75</div>
+                                    <div class="calories label">Calories</div>
+                                    <div class="calories value">4g</div>
+                                    <div class="fat label">fat</div>
+                                    <div class="fat value">6g</div>
+                                    <div class="carbs label">carbs</div>
+                                    <div class="calories value">4g</div>
+                                    <div class="protein label">protein</div>
+                                </div>
+                            </div>
+                            
+
+                        </div><!-- ingredient -->
+                        
+                        <div class="ingredient">
+            
+                            
+                            <div class="ingredient-amount">4 slices</div>
+                            
+                
+                            
+                            <div class="ingredient-item">
+                                Brioche Bread
+                                
+                                
+                            </div>
+                            
+
+                            <div class="ingredient-detail detail-cost">$0.92</div>
+                            <div class="ingredient-detail detail-cost-per-serving">$0.23</div>
+
+                            
+                            <div class="ingredient-detail detail-nutrition-per-serving">
+                                <div class="nutrition">
+                                    <div class="calories value">110</div>
+                                    <div class="calories label">Calories</div>
                                     <div class="calories value">2g</div>
+                                    <div class="fat label">fat</div>
+                                    <div class="fat value">20g</div>
+                                    <div class="carbs label">carbs</div>
+                                    <div class="calories value">4g</div>
                                     <div class="protein label">protein</div>
                                 </div>
                             </div>
@@ -1338,8 +1636,12 @@ a.menu-header:hover {
             
             
             
+            
+            
 
 
+            
+            
             
             
             
@@ -1354,7 +1656,7 @@ a.menu-header:hover {
 
 
     <script type="application/ld+json">
-        {"@context": "https://schema.org", "@type": "Recipe", "name": "Recipe Parent", "recipeYield": "12 servings", "recipeIngredient": ["2 pints Child Recipe 1", "1\u00bd lbs Child Recipe 2", "2 loaves Child Recipe 3"]}
+        {"@context": "https://schema.org", "@type": "Recipe", "name": "Pluralize", "recipeYield": "1 serving", "recipeIngredient": ["1 Egg", "\u00bd cup Milk", "1 slice Brioche Bread", "1 (15 oz) can Red Kidney Beans"]}
     </script>
 
     <script>
@@ -1485,6 +1787,13 @@ function scale2x() {
     button.classList.add("selected")
 }
 
+function scale4x() {
+    scaleNone();
+    pageBody.classList.add("display-scale-4x");
+    const button = document.querySelector(".display-scale-4x-btn");
+    button.classList.add("selected")
+}
+
 
 pageBody.classList.add("display-scale-1x");
 
@@ -1591,6 +1900,30 @@ document.querySelector(".menu-copy-ingredients.scale-2x .menu-header").addEventL
 
 
 
+document.querySelector(".menu-copy-ingredients.scale-4x .menu-header").addEventListener("click", function() {
+    var copiedText = "";
+    console.log('hit copy button');
+    document.querySelector(".menu-copy-ingredients.scale-4x .copy-ingredients").querySelectorAll("li").forEach(function(line) {
+        copiedText += line.textContent.trim() + "\n";
+    });
+    navigator.clipboard.writeText(copiedText)
+        .then(function() {
+        document.querySelector(".menu-copy-ingredients.scale-4x .menu-icon").innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>';
+        document.querySelector(".menu-copy-ingredients.scale-4x .button-label").innerHTML = 'Copied!';
+        setTimeout(function() {
+            document.querySelector(".menu-copy-ingredients.scale-4x .menu-icon").innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M280 64l40 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l40 0 9.6 0C121 27.5 153.3 0 192 0s71 27.5 78.4 64l9.6 0zM64 112c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l256 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16l-16 0 0 24c0 13.3-10.7 24-24 24l-88 0-88 0c-13.3 0-24-10.7-24-24l0-24-16 0zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"/></svg>';
+            document.querySelector(".menu-copy-ingredients.scale-4x .button-label").innerHTML = 'Copy Ingredients';
+        }, 3000);
+        })
+        .catch(function(err) {
+        console.error('Unable to copy text: ', err);
+        });
+    });
+
+
+
+
+
 
 
 
@@ -1620,6 +1953,10 @@ document.addEventListener("keydown", function(e) {
     
     if (e.code === "Digit2") {
         scale2x();
+    }
+    
+    if (e.code === "Digit3") {
+        scale4x();
     }
     
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Print • Recipe Child 3</title>
+    <title>Print • Pluralize</title>
     <link rel='preconnect' href='https://fonts.googleapis.com'>
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
     <link href='https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap' rel='stylesheet'>
@@ -45,6 +45,14 @@ h1, h3 {
 
 
 .display-scale-1x .scale-1x {
+  display: block;
+}
+
+.display-scale-2x .scale-2x {
+  display: block;
+}
+
+.display-scale-4x .scale-4x {
   display: block;
 }
 
@@ -347,6 +355,42 @@ h3 {
         <div class="menu-section-break"></div>
 
         
+        <div class='menu-scale'>
+            <h3 class='menu-header'>Scale</h3>
+            <div class='menu-content menu-button-section'>
+                
+                <div class="menu-button menu-button-scale display-scale-1x-btn selected" onclick="scale1x()">
+
+                    
+                    <span style="margin-top:-3px;">1</span>
+                    <span style="font-size:0.9rem;">Serving</span>
+                    
+
+                </div>
+                
+                <div class="menu-button menu-button-scale display-scale-2x-btn " onclick="scale2x()">
+
+                    
+                    <span style="margin-top:-3px;">2</span>
+                    <span style="font-size:0.9rem;">Servings</span>
+                    
+
+                </div>
+                
+                <div class="menu-button menu-button-scale display-scale-4x-btn " onclick="scale4x()">
+
+                    
+                    <span style="margin-top:-3px;">4</span>
+                    <span style="font-size:0.9rem;">Servings</span>
+                    
+
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="menu-section-break"></div>
+        
 
         
 
@@ -379,12 +423,24 @@ h3 {
         <div class="header">
 
             <div class="title-area">
-                <h1>Recipe Child 3</h1>
+                <h1>Pluralize</h1>
                 
 
                 
                 
                 <div class='scale scale-1x'>
+                    <span class=''></span>
+                </div>
+                
+                
+                
+                <div class='scale scale-2x'>
+                    <span class=''></span>
+                </div>
+                
+                
+                
+                <div class='scale scale-4x'>
                     <span class=''></span>
                 </div>
                 
@@ -402,7 +458,45 @@ h3 {
                 
                 <h2 class='ingredient-list-name'>Ingredients</h2>
                 
+                <div class="ingredient">1 Egg</div>
+                
+                <div class="ingredient">½ cup Milk</div>
+                
+                <div class="ingredient">1 slice Brioche Bread</div>
+                
+                <div class="ingredient">1 (15 oz) can Red Kidney Beans</div>
+                
+                
+            </div>
+            
+            
+            
+            <div class="scale scale-2x ingredients-column">
+                
+                <h2 class='ingredient-list-name'>Ingredients</h2>
+                
                 <div class="ingredient">2 Eggs</div>
+                
+                <div class="ingredient">1 cup Milk</div>
+                
+                <div class="ingredient">2 slices Brioche Bread</div>
+                
+                <div class="ingredient">2 (15 oz) cans Red Kidney Beans</div>
+                
+                
+            </div>
+            
+            
+            
+            <div class="scale scale-4x ingredients-column">
+                
+                <h2 class='ingredient-list-name'>Ingredients</h2>
+                
+                <div class="ingredient">4 Eggs</div>
+                
+                <div class="ingredient">2 cups Milk</div>
+                
+                <div class="ingredient">4 slices Brioche Bread</div>
                 
                 
             </div>
@@ -412,11 +506,15 @@ h3 {
             
             
             
+            
+            
+            
+            
 
         </div><!-- columns -->
 
         <div class="footer">
-            <div class="recipe-url">https://realjoemay.github.io/jmr-demo/linked-child-3</div>
+            <div class="recipe-url">https://realjoemay.github.io/jmr-demo/scale-pluralize</div>
             <div class="recipe-qr"><img src="../recipe-qr.png"></div>
         </div>
 
@@ -449,6 +547,20 @@ function scale1x() {
     scaleNone();
     pageBody.classList.add("display-scale-1x");
     const button = document.querySelector(".display-scale-1x-btn");
+    button.classList.add("selected")
+}
+
+function scale2x() {
+    scaleNone();
+    pageBody.classList.add("display-scale-2x");
+    const button = document.querySelector(".display-scale-2x-btn");
+    button.classList.add("selected")
+}
+
+function scale4x() {
+    scaleNone();
+    pageBody.classList.add("display-scale-4x");
+    const button = document.querySelector(".display-scale-4x-btn");
     button.classList.add("selected")
 }
 
@@ -497,6 +609,14 @@ document.addEventListener("keydown", function(e) {
     
     if (e.code === "Digit1") {
         scale1x();
+    }
+    
+    if (e.code === "Digit2") {
+        scale2x();
+    }
+    
+    if (e.code === "Digit3") {
+        scale4x();
     }
     
 
